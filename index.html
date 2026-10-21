@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Home | Visvaa Portfolio</title>
+  <meta name="description" content="Visvaa is a Computer Science Engineering student and aspiring Full Stack Developer. See projects, skills and contact details.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Visvaa</a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      </div>
+      <nav aria-label="Main">
+        <ul class="nav-list" id="site-menu"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="skills.html">Skills</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <h1 id="hero-title">Hi, I'm Visvaa.</h1>
+          <p class="subtitle">Aspiring Full Stack Developer.</p>
+          <p>I am a Computer Science Engineering student who enjoys building useful, accessible websites and learning how software works from the database to the browser.</p>
+          <div class="btn-group">
+            <a class="btn btn-light" href="projects.html">View my projects</a>
+            <a class="btn btn-outline" href="contact.html">Contact me</a>
+          </div>
+        </div>
+        <figure class="code-card">
+<pre><code>const visvaa = {
+  studying: "Computer Science Engineering",
+  goal: "Full Stack Developer",
+  focus: ["web", "programming"]
+};</code></pre>
+          <figcaption>A small code sketch of who I am.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="block" aria-labelledby="glance-title">
+      <div class="container">
+        <h2 id="glance-title">Skills at a glance</h2>
+        <ul class="tags">
+          <li>C</li><li>Python</li><li>Java</li><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>SQL</li><li>Git</li><li>GitHub</li>
+        </ul>
+        <p>I am a Computer Science Engineering student building toward full stack development. <a href="skills.html">See all skills</a> or <a href="about.html">read more about me</a>.</p>
+      </div>
+    </section>
+    <section class="block" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title">Featured projects</h2>
+        <ul class="grid">
+          <li><article class="card">
+            <h3>Smart Dustbin using Arduino</h3>
+            <p>An Arduino-based dustbin that opens its lid automatically when it senses a hand nearby.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Arduino</li><li>C++</li><li>Ultrasonic sensor</li></ul>
+            <p class="placeholder">Repository link: add your URL here.</p>
+            <p class="placeholder">Live demo link: add your URL here.</p>
+          </article></li>
+          <li><article class="card">
+            <h3>Lost and Found Portal</h3>
+            <p>A web portal where users can report lost items and browse items that were found.</p>
+            <ul class="tags" aria-label="Technologies used"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>SQL</li></ul>
+            <p class="placeholder">Repository link: add your URL here.</p>
+            <p class="placeholder">Live demo link: add your URL here.</p>
+          </article></li>
+        </ul>
+        <p><a href="projects.html">See all projects</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <time datetime="2026">2026</time> Visvaa. Built with HTML5, CSS3 and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

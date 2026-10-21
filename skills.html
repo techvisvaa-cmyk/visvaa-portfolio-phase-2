@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Skills | Visvaa Portfolio</title>
+  <meta name="description" content="Skills of Visvaa in programming, web development, databases and developer tools.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Visvaa</a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      </div>
+      <nav aria-label="Main">
+        <ul class="nav-list" id="site-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="skills.html" aria-current="page">Skills</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="page-title"><div class="container"><h1>Skills</h1><p>What I use to build software.</p></div></header>
+    <section class="block" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills by category</h2>
+        <ul class="grid">
+          <li><section class="card" aria-labelledby="sk0">
+            <h3 id="sk0">Programming</h3>
+            <ul class="tags"><li>C</li><li>Python</li><li>Java</li></ul>
+          </section></li>
+          <li><section class="card" aria-labelledby="sk1">
+            <h3 id="sk1">Web Development</h3>
+            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+          </section></li>
+          <li><section class="card" aria-labelledby="sk2">
+            <h3 id="sk2">Database</h3>
+            <ul class="tags"><li>SQL</li></ul>
+          </section></li>
+          <li><section class="card" aria-labelledby="sk3">
+            <h3 id="sk3">Tools</h3>
+            <ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li></ul>
+          </section></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <time datetime="2026">2026</time> Visvaa. Built with HTML5, CSS3 and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

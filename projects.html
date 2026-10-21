@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Projects | Visvaa Portfolio</title>
+  <meta name="description" content="Projects by Visvaa: Smart Dustbin with Arduino, Lost and Found Portal, Weather Application and Movie Ticket Booking System.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Visvaa</a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      </div>
+      <nav aria-label="Main">
+        <ul class="nav-list" id="site-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html" aria-current="page">Projects</a></li><li><a href="skills.html">Skills</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="page-title"><div class="container"><h1>Projects</h1><p>Things I have built while learning.</p></div></header>
+    <section class="block" aria-labelledby="all-projects">
+      <div class="container">
+        <h2 id="all-projects">All projects</h2>
+        <ul class="grid">
+          <li><article class="card">
+            <h3>Smart Dustbin using Arduino</h3>
+            <p>An Arduino-based dustbin that opens its lid automatically when it senses a hand nearby.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Arduino</li><li>C++</li><li>Ultrasonic sensor</li></ul>
+            <p class="placeholder">Repository link: add your URL here.</p>
+            <p class="placeholder">Live demo link: add your URL here.</p>
+          </article></li>
+          <li><article class="card">
+            <h3>Lost and Found Portal</h3>
+            <p>A web portal where users can report lost items and browse items that were found.</p>
+            <ul class="tags" aria-label="Technologies used"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>SQL</li></ul>
+            <p class="placeholder">Repository link: add your URL here.</p>
+            <p class="placeholder">Live demo link: add your URL here.</p>
+          </article></li>
+          <li><article class="card">
+            <h3>Weather Application</h3>
+            <p>An app that shows current weather conditions for a city the user searches for.</p>
+            <ul class="tags" aria-label="Technologies used"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+            <p class="placeholder">Repository link: add your URL here.</p>
+            <p class="placeholder">Live demo link: add your URL here.</p>
+          </article></li>
+          <li><article class="card">
+            <h3>Movie Ticket Booking System</h3>
+            <p>A booking system for choosing a movie, a show time and seats.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Java</li><li>SQL</li></ul>
+            <p class="placeholder">Repository link: add your URL here.</p>
+            <p class="placeholder">Live demo link: add your URL here.</p>
+          </article></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <time datetime="2026">2026</time> Visvaa. Built with HTML5, CSS3 and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

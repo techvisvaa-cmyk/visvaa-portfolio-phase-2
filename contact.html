@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Contact | Visvaa Portfolio</title>
+  <meta name="description" content="Contact Visvaa using the form. Includes accessible validation and clear status messages.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Visvaa</a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      </div>
+      <nav aria-label="Main">
+        <ul class="nav-list" id="site-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="skills.html">Skills</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="page-title"><div class="container"><h1>Contact</h1><p>Send a message or get in touch.</p></div></header>
+    <section class="block" aria-labelledby="form-title">
+      <div class="container layout-two">
+        <div>
+          <h2 id="form-title">Send a message</h2>
+          <form id="contact-form" novalidate>
+        <div>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" aria-describedby="name-error">
+          <p class="error" id="name-error"></p>
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required maxlength="120" autocomplete="email" aria-describedby="email-error">
+          <p class="error" id="email-error"></p>
+        </div>
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required minlength="3" maxlength="100" aria-describedby="subject-error">
+          <p class="error" id="subject-error"></p>
+        </div>
+        <div>
+          <label for="message">Message</label><span class="hint" id="message-hint"> (10 to 1000 characters)</span>
+          <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000" aria-describedby="message-hint message-error"></textarea>
+          <p class="error" id="message-error"></p>
+        </div>
+            <button class="btn" type="submit">Send message</button>
+            <p class="status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <aside class="note" aria-labelledby="details-title">
+          <h2 id="details-title">Contact details</h2>
+          <address>
+            <p>Email: <a href="mailto:your.name@example.com">your.name@example.com</a></p>
+            <p class="placeholder">Sample address. Replace it with your own.</p>
+          </address>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <time datetime="2026">2026</time> Visvaa. Built with HTML5, CSS3 and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

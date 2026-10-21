@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <title>About | Visvaa Portfolio</title>
+  <meta name="description" content="Learn about Visvaa, a Computer Science Engineering student interested in web development, programming and technology.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Visvaa</a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      </div>
+      <nav aria-label="Main">
+        <ul class="nav-list" id="site-menu"><li><a href="index.html">Home</a></li><li><a href="about.html" aria-current="page">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="skills.html">Skills</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="page-title"><div class="container"><h1>About me</h1><p>A student developer on the way to full stack.</p></div></header>
+    <section class="block" aria-labelledby="intro-title">
+      <div class="container layout-two">
+        <div>
+          <h2 id="intro-title">Introduction</h2>
+          <p>I am studying Computer Science Engineering. I enjoy web development, programming and exploring new technology.</p>
+          <p>My career goal is to become a Full Stack Developer who builds fast, accessible products for everyone.</p>
+        </div>
+        <aside class="note" aria-labelledby="facts-title">
+          <h2 id="facts-title">Quick facts</h2>
+          <p>Studying: Computer Science Engineering</p>
+          <p>Interests: web development, programming, technology</p>
+        </aside>
+      </div>
+    </section>
+    <section class="block" aria-labelledby="edu-title">
+      <div class="container">
+        <h2 id="edu-title">Education</h2>
+        <p class="placeholder">Sample details. Replace them with your own.</p>
+        <dl class="edu">
+          <dt>B.E. Computer Science Engineering, Your College Name</dt>
+          <dd><time datetime="2023">2023</time> to <time datetime="2027">2027</time></dd>
+          <dt>Higher Secondary, Your School Name</dt>
+          <dd><time datetime="2021">2021</time> to <time datetime="2023">2023</time></dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <time datetime="2026">2026</time> Visvaa. Built with HTML5, CSS3 and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
